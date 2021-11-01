@@ -153,7 +153,6 @@ function draw() {
     if (gamestate == START) {
         ctx.fillStyle = "pink"
         ctx.beginPath();
-        ctx.fillRect(100,100,200,200)
         ctx.fillText("スタート画面だよ　画面をタッチしてね　タッチしたらゲームが始まるよ　赤と青がくっつかない様に緑を取ってからワープホールを配置しよう", 100, 100);
     }
     else if (gamestate == PLAYING) {
@@ -186,7 +185,7 @@ function draw() {
     }
     //GameOver
     if (gamestate == GAMEOVER) {
-        ctx.fillStyle = "purple";
+        ctx.fillStyle = "green";
         ctx.fillText("ゲーム オーバー？", 400, 400);
         ctx.font = "40px serif";
     };
