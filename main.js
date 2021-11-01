@@ -6,7 +6,7 @@ const width = canvas.width;
 const height = canvas.height;
 
 count = 0; //カウントの初期値
-timerID = setInterval('countup()', 1000); //1秒毎にcountup()を呼び出し
+timerID = setInterval('countup()', 1); //1000分の1秒毎にcountup()を呼び出し
 function countup() {
     if (gamestate == PLAYING) {
         count++;
@@ -16,7 +16,7 @@ function countup() {
 
 //キャラクターの位置
 let char1 = { x: 10, y: 10, isWarpAllows: true };　　//連想配列を使っている
-let char2 = { x: 400, y: 200, isWarpAllows: true };
+let char2 = { x: 790, y: 790, isWarpAllows: true };
 
 //スタートボタン
 
@@ -144,7 +144,7 @@ function updatePosition() {
         gamestate = GAMEOVER;
     }
 };
-setInterval(updatePosition, 50);
+setInterval(updatePosition, 40);
 
 //描画する関数
 function draw() {
@@ -153,34 +153,33 @@ function draw() {
     if (gamestate == START) {
         ctx.fillStyle = "pink"
         ctx.beginPath();
-        ctx.fillRect(400, 400, 400, 400);
-        ctx.fillText("スタート", 400, 400);
+        ctx.fillText("スタート画面だよ　画面をタッチしてね　タッチしたらゲームが始まるよ　赤と青がくっつかない様に緑を取ってからワープホールを配置しよう", 100, 100);
     }
     else if (gamestate == PLAYING) {
         //赤い敵
         ctx.fillStyle = "red";
         ctx.beginPath();
-        ctx.arc(char1.x, char1.y, 3, 0, 2 * Math.PI);
+        ctx.arc(char1.x, char1.y, 4, 0, 3 * Math.PI);
         ctx.fill();
 
         //青い敵
         ctx.fillStyle = "blue";
         ctx.beginPath();
-        ctx.arc(char2.x, char2.y, 3, 0, 2 * Math.PI);
+        ctx.arc(char2.x, char2.y, 4, 0, 3 * Math.PI);
         ctx.fill();
 
         //var items= [{x: Math.random() * width, y: Math.random() * height},{x: Math.random() * width, y: Math.random() * height}];
         for (let i = 0; i < items.length; i++) {
-            ctx.fillStyle = "yellow";
+            ctx.fillStyle = "green";
             ctx.beginPath();
-            ctx.arc(items[i].x, items[i].y, 3, 0, 2 * Math.PI);
+            ctx.fillRect(items[i].x, items[i].y,8,8);
             ctx.fill();
         }
         //ワープホール
         for (let i = 0; i < warps.length; i++) {
             ctx.fillStyle = "black";
             ctx.beginPath();
-            ctx.arc(warps[i].x, warps[i].y, 3, 0, 2 * Math.PI);
+            ctx.fillRect(warps[i].x, warps[i].y,8,8);
             ctx.fill();
         }
     }
