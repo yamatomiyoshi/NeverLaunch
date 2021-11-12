@@ -73,6 +73,7 @@ canvas.addEventListener('mousedown', function (e) {
         gamestate = PLAYING
         // 音を鳴らす
         music.play();
+        bgm();
     }
     else if (gamestate = PLAYING) {
         for (let i = 0; i < items.length; i++) {
@@ -181,7 +182,6 @@ function updatePosition() {
     if (distance < 1) {
         console.log("GAME OVER");
         stop();
-        over();
         gamestate = GAMEOVER;
         //音を止める
     
