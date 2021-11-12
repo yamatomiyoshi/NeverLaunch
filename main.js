@@ -43,21 +43,6 @@ var music = new Audio();
   
 bgm();
 
-//効果音ゲーム オーバー
-  function over() {
-    music.preload = "auto";
-    music.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/gameoverSound.m4a";
-    music.load();
-
-    over.addEventListener("ended", function () {
-      music2.currentTime = 0;
-      music2.play();
-    }, false);
-  }
-over();
-
-
-
 //ポイント
 let point = 0;
 
@@ -72,7 +57,6 @@ canvas.addEventListener('mousedown', function (e) {
     if (gamestate == START) {
         gamestate = PLAYING
         // 音を鳴らす
-        music.play();
         bgm();
     }
     else if (gamestate = PLAYING) {
