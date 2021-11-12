@@ -57,7 +57,6 @@ canvas.addEventListener('mousedown', function (e) {
     if (gamestate == START) {
         gamestate = PLAYING
         // 音を鳴らす
-        bgm();
     }
     else if (gamestate = PLAYING) {
         for (let i = 0; i < items.length; i++) {
