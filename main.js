@@ -18,7 +18,44 @@ function countup() {
 let char1 = { x: 10, y: 10, isWarpAllows: true };　　//連想配列を使っている
 let char2 = { x: 790, y: 790, isWarpAllows: true };
 
-//スタートボタン
+//音出し
+var music = new Audio();
+  function bgm() {
+    music.preload = "auto";
+    music.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/mainBGM.m4a";
+    music.load();
+
+    music.addEventListener("ended", function () {
+      music.currentTime = 0;
+      music.play();
+    }, false);
+  }
+
+  function play() {
+    music.loop = true;
+    music.play();
+  }
+
+  function stop() {
+    music.pause();
+    music.currentTime = 0;
+  }
+  
+bgm();
+
+//効果音ゲーム オーバー
+  function over() {
+    music.preload = "auto";
+    music.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/gameoverSound.m4a";
+    music.load();
+
+    over.addEventListener("ended", function () {
+      music2.currentTime = 0;
+      music2.play();
+    }, false);
+  }
+over();
+
 
 
 //ポイント
@@ -34,6 +71,8 @@ let gamestate = START;
 canvas.addEventListener('mousedown', function (e) {
     if (gamestate == START) {
         gamestate = PLAYING
+        // 音を鳴らす
+        music.play();
     }
     else if (gamestate = PLAYING) {
         for (let i = 0; i < items.length; i++) {
@@ -141,7 +180,11 @@ function updatePosition() {
     );
     if (distance < 1) {
         console.log("GAME OVER");
+        stop();
+        over();
         gamestate = GAMEOVER;
+        //音を止める
+    
     }
 };
 setInterval(updatePosition, 40);
