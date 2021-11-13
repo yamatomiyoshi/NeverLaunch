@@ -21,7 +21,7 @@ let char2 = { x: 790, y: 790, isWarpAllows: true };
 //音出し
 var music = new Audio();
     music.preload = "auto";
-    music.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/mainBGM.m4a";
+    music.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/ネバーロンチBGM.m4a";
     music.load();
 
     music.addEventListener("ended", function () {
