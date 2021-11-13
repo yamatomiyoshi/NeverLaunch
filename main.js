@@ -20,7 +20,6 @@ let char2 = { x: 790, y: 790, isWarpAllows: true };
 
 //音出し
 var music = new Audio();
-  function bgm() {
     music.preload = "auto";
     music.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/mainBGM.m4a";
     music.load();
@@ -57,7 +56,6 @@ canvas.addEventListener('mousedown', function (e) {
     if (gamestate == START) {
         gamestate = PLAYING
         // 音を鳴らす
-    play();
     }
     else if (gamestate = PLAYING) {
         for (let i = 0; i < items.length; i++) {
