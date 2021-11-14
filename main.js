@@ -92,9 +92,9 @@ itembgm();
 
 var music4 = new Audio();
 function warpbgm() {
-    // music4.preload = "auto";
+    music4.preload = "auto";
     music4.src = "https://yamatomiyoshi.github.io/NeverLaunch/warpSound.m4a";
-    music4.load();
+//     music4.load();
   }
 
   function warpplay() {
