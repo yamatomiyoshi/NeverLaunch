@@ -22,7 +22,7 @@ let char2 = { x: 790, y: 790, isWarpAllows: true };
 var music = new Audio();
 function bgm() {
     music.preload = "auto";
-    music.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/ネバーロンチBGM.m4a";
+    music.src = "https://yamatomiyoshi.github.io/NeverLaunch/ネバーロンチBGM.m4a";
     music.load();
 
     music.addEventListener("ended", function () {
@@ -46,7 +46,7 @@ bgm();
 var music2 = new Audio();
 function gameoverbgm() {
     music2.preload = "auto";
-    music2.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/gameoverSound.m4a";
+    music2.src = "https://yamatomiyoshi.github.io/NeverLaunch/gameoverSound.m4a";
     music2.load();
 
     music2.addEventListener("ended", function () {
@@ -70,7 +70,7 @@ gameoverbgm();
 var music3 = new Audio();
 function itembgm() {
     //music3.preload = "auto";
-    music3.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/itemSound.m4a";
+    music3.src = "https://yamatomiyoshi.github.io/NeverLaunch/itemSound.m4a";
     music3.load();
 
     // music3.addEventListener("ended", function () {
@@ -93,7 +93,7 @@ itembgm();
 var music4 = new Audio();
 function warpbgm() {
     // music4.preload = "auto";
-    music4.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/warpSound.m4a";
+    music4.src = "https://yamatomiyoshi.github.io/NeverLaunch/warpSound.m4a";
     music4.load();
   }
 
@@ -111,7 +111,7 @@ warpbgm();
 var music5 = new Audio();
 function sesshokuSoundbgm() {
     // music4.preload = "auto";
-    music5.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/sesshokuSound.m4a";
+    music5.src = "https://yamatomiyoshi.github.io/NeverLaunch/sesshokuSound.m4a";
     music5.load();
   }
 
@@ -130,7 +130,7 @@ function sesshokuSoundbgm() {
 var music6 = new Audio();
 function homeswitch() {
     // music4.preload = "auto";
-    music6.src = "/Users/yammy/Desktop/never_launch_folda/NeverLanunch/homeswitch.m4a";
+    music6.src = "https://yamatomiyoshi.github.io/NeverLaunch/homeswitch.m4a";
     music6.load();
   }
 
