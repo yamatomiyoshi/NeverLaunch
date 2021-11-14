@@ -21,7 +21,7 @@ let char2 = { x: 790, y: 790, isWarpAllows: true };
 //音出し
 var music = new Audio();
 function bgm() {
-//     music.preload = "auto";
+    music.preload = "auto";
     music.src = "https://yamatomiyoshi.github.io/NeverLaunch/neverlaunchbgm.m4a";
     music.load();
 
