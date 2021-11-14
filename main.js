@@ -191,7 +191,7 @@ function updatePosition() {
         console.log("GAME OVER");
         stop();
         gamestate = GAMEOVER;
-        gameoverplay();
+        music.play2();
         //音を止める
     
     }
