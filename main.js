@@ -158,7 +158,7 @@ let gamestate = START;
 canvas.addEventListener('mousedown', function (e) {
     if (gamestate == START) {
         gamestate = PLAYING
-        homeswitchplay()
+        homeswitchplay();
         // 音を鳴らす
         play();
     }
