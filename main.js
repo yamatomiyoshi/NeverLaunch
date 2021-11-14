@@ -108,25 +108,6 @@ function warpbgm() {
   
 warpbgm();
 
-var music5 = new Audio();
-function sesshokuSoundbgm() {
-    // music4.preload = "auto";
-    music5.src = "https://yamatomiyoshi.github.io/NeverLaunch/sesshokuSound.m4a";
-    music5.load();
-  }
-
-  function sesshokuSoundplay() {
-    music5.play();
-  }
-
-  function sesshokuSoundstop() {
-    music5.pause();
-    music5.currentTime = 0;
-  }
-  
-  sesshokuSoundbgm();
-
-
 var music6 = new Audio();
 function homeswitch() {
     // music4.preload = "auto";
@@ -274,7 +255,6 @@ function updatePosition() {
     if (distance < 1) {
         console.log("GAME OVER");
         stop();
-        sesshokuSoundplay()
         gamestate = GAMEOVER;
         gameoverplay();
 
