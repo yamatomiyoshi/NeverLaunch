@@ -21,7 +21,7 @@ let char2 = { x: 790, y: 790, isWarpAllows: true };
 //音出し
 var music = new Audio();
 function bgm() {
-    music.preload = "auto";
+//     music.preload = "auto";
     music.src = "https://yamatomiyoshi.github.io/NeverLaunch/ネバーロンチBGM.m4a";
     music.load();
 
@@ -45,7 +45,7 @@ bgm();
 
 var music2 = new Audio();
 function gameoverbgm() {
-    music2.preload = "auto";
+//     music2.preload = "auto";
     music2.src = "https://yamatomiyoshi.github.io/NeverLaunch/gameoverSound.m4a";
     music2.load();
 
