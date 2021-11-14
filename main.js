@@ -22,7 +22,7 @@ let char2 = { x: 790, y: 790, isWarpAllows: true };
 var music = new Audio();
 function bgm() {
     music.preload = "auto";
-    music.src = "../ネバーロンチBGM.m4a";
+    music.src = "./ネバーロンチBGM.m4a";
     music.load();
 
     music.addEventListener("ended", function () {
