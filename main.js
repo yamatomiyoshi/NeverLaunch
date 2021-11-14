@@ -22,7 +22,7 @@ let char2 = { x: 790, y: 790, isWarpAllows: true };
 var music = new Audio();
 function bgm() {
 //     music.preload = "auto";
-    music.src = "https://yamatomiyoshi.github.io/NeverLaunch/%E3%83%8D%E3%83%90%E3%83%BC%E3%83%AD%E3%83%B3%E3%83%81BGM.m4a";
+    music.src = "https://yamatomiyoshi.github.io/NeverLaunch/ネバーロンチBGM.m4a";
     music.load();
 
     music.addEventListener("ended", function () {
