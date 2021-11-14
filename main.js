@@ -94,7 +94,7 @@ var music4 = new Audio();
 function warpbgm() {
     music4.preload = "auto";
     music4.src = "https://yamatomiyoshi.github.io/NeverLaunch/warpSound.m4a";
-//     music4.load();
+    music4.load();
   }
 
   function warpplay() {
@@ -157,7 +157,7 @@ let gamestate = START;
 //x.yの位置
 canvas.addEventListener('mousedown', function (e) {
     if (gamestate == START) {
-        gamestate = PLAYING
+        gamestate = PLAYING;
         homeswitchplay();
         // 音を鳴らす
         play();
