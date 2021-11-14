@@ -271,7 +271,7 @@ function draw() {
     if (gamestate == START) {
         ctx.fillStyle = "black"
         ctx.beginPath();
-        ctx.fillText('画面をクリックすると、赤の国の王様と青の国の王様の最終決戦がはじまります。ワープを出現させて移動させることで衝突を阻止し続けてください。ワープはワープの素である飲料ワーピルを獲得することで使用できます。', 100, 100);
+        ctx.fillText('赤の国の王様と青の国の王様の衝突をワープを出現させて移動させることで阻止し続けよ', 100, 100);
     }
     else if (gamestate == PLAYING) {
         //赤い敵
